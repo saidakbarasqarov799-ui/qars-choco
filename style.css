@@ -1,0 +1,319 @@
+/* Navigatsiya ro'yxati uchun */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+/* Qolgan kodingiz o'zgarishsiz qoladi */
+header {
+    background-color: #FFF2E1;
+    color: #A79277;
+    padding: 25px;
+    text-align: center;
+}
+/* ... siz yozgan qolgan barcha CSS kodlar ... */
+header {
+    background-color: #FFF2E1;
+    color: #A79277;
+    padding: 25px;
+    text-align: center;
+}
+nav {
+    text-align: center;
+    background-color: #A79277;
+    overflow: hidden;
+    color: #FFF2E1;
+    padding: 10px;
+}
+nav a {
+    color: #FFF2E1;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Hammasini chapga tekislaydi */
+    justify-content: flex-start; /* Hammasini tepaga ko'taradi */
+    text-align: left; /* Matnni chapdan boshlaydi */
+    padding: 100px; /* Chetga yopishib qolmasligi uchun ozgina joy */
+    background-color: #FFF2E1;
+}
+
+section h1 {
+    color: #A79277;/* Sarlavha rangini o'zgartiradi */
+    margin-top: 0; /* Tepadagi ortiqcha bo'shliqni yo'qotadi */
+}
+
+section p {
+    color: #A79277;/* Paragraf rangini o'zgartiradi */
+    margin-left: 0;;/* Paragrafni chapga tekislaydi */
+}
+footer {
+    background-color: #A79277;
+    color: #FFF2E1;
+    text-align: center;
+    padding: 10px;
+}
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Saytingiz kengligiga qarab */
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 25px; /* Rasmlaringizga zamonaviy yumshoq burchak beradi */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Soya saytni "qimmat" ko'rsatadi */
+}
+
+.slider-images img {
+    position: absolute;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    object-fit: cover; /* Rasmlar cho'zilib ketmasligi uchun */
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; /* Silliq o'tish */
+    animation: slideShow 15s infinite;
+}
+
+/* Har bir rasmning chiqish vaqti */
+.slider-images img:nth-child(1) { animation-delay: 0s; }
+.slider-images img:nth-child(2) { animation-delay: 5s; }
+.slider-images img:nth-child(3) { animation-delay: 10s; }
+
+
+@keyframes slideShow {
+    0% { opacity: 0; }
+    10% { opacity: 1; }  /* 5-sekundning boshida to'liq ko'rinadi */
+    33% { opacity: 1; }  /* 5-sekundning oxirigacha turadi */
+    43% { opacity: 0; }  /* Keyingi rasmga joy bo'shatadi */
+    100% { opacity: 0; }
+}
+/* Mahsulotlar bo'limi */
+.products-section {
+    padding: 80px 50px;
+    background-color: #FFF2E1;
+    text-align: center;
+}
+
+.section-title {
+    color: #3D2B1F;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Avtomatik moslashish */
+    gap: 30px;
+}
+
+.product-card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-10px); /* Sichqoncha kelsa yuqoriga ko'tariladi */
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.badge {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: #d42d2d;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-top: 10px;
+}
+
+.new-price {
+    font-size: 1.5rem;
+    color: #3D2B1F;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    background-color: #A79277;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+/* Mahsulotlar bo'limi oxiri */
+/* Saytga kirganda mahsulotlar yashirin bo'lishi uchun */
+#mahsulotlar {
+    display: none;
+}
+
+/* Header va Nav har doim ko'rinib turishi uchun (ixtiyoriy, agar padding kerak bo'lsa) */
+header, nav {
+    width: 100%;
+    position: relative;
+    z-index: 100;
+}
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links p {
+    color: #FFF2E1;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid #FFF2E1;
+}
+
+/* Telegram ko'k rangi */
+.telegram {
+    color: #FFF2E1;
+    background-color: #229ED9;
+}
+
+/* Instagram rangi (Gradient uslubida) */
+.instagram {
+    color: #FFF2E1;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Sichqoncha kelsa biroz kattalashadi */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.order-section {
+    padding: 50px;
+    background-color: #FFF2E1;
+    text-align: center;
+}
+
+.order-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order-form input, .order-form textarea, .order-form select {
+    padding: 12px;
+    border: 2px solid #A79277;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    background-color: #3D2B1F;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #A79277;
+}
+/* --- MOBIL MOSLASHUV (Media Query) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Header va Sarlavhalarni kichraytiramiz */
+    header h1 {
+        font-size: 1.8rem;
+        padding: 10px;
+    }
+
+    section h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    /* 2. Navigatsiya menyusini moslash */
+    nav ul {
+        flex-direction: column; /* Menyu tugmalarini ustma-ust qiladi */
+        gap: 5px;
+    }
+    
+    nav a {
+        padding: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    /* 3. Bosh sahifadagi Section (Rasm va Matn) */
+    section {
+        flex-direction: column; /* Rasm tepada, matn pastda bo'ladi */
+        padding: 20px;
+        text-align: center;
+    }
+
+    .slider-wrapper {
+        max-width: 100%;
+        height: 300px; /* Telefonda rasm balandligini kamaytiramiz */
+        margin-bottom: 20px;
+    }
+
+    /* 4. Mahsulotlar katakchalari */
+    .product-grid {
+        grid-template-columns: 1fr; /* Telefonda mahsulotlar bittadan chiqadi */
+        padding: 10px;
+    }
+
+    .product-card {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /* 5. Buyurtma berish formasi */
+    .order-form {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* 6. Footer (Ijtimoiy tarmoqlar) */
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
