@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QARS-CHOCO: Siz izlagan o'sha shirinlik</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <body>
 
     <header>
         <h1>QARS-CHOCO</h1>
     </header>
+
     <nav>
         <ul>
             <li><a href="#" id="home-link">Bosh sahifa</a></li>
             <li><a href="#" id="products-link">Mahsulotlar</a></li>
-            <li><a href="#about">Haqida</a></li>
-            <li><a href="#contact">Aloqada bo'lish</a></li>
+            <li><a href="#" id="about-link">Haqida</a></li>
+            <li><a href="#contact">Aloqa</a></li>
         </ul>
     </nav>
 
@@ -26,67 +27,79 @@
             <h1>QARS-CHOCO: Siz izlagan o'sha shirinlik</h1>
             <div class="slider-wrapper">
                 <div class="slider-images">
-                    <img src="rasm1.jpg" alt="Qars-Choco Premium">
-                    <img src="rasm2.jpg" alt="Qars-Choco Walnut">
-                    <img src="rasm3.jpg" alt="Qars-Choco Process">
+                    <img src="rasm1.jpg" alt="Qars-Choco 1">
+                    <img src="rasm2.jpg" alt="Qars-Choco 2">
+                    <img src="rasm3.jpg" alt="Qars-Choco 3">
                 </div>
             </div>
-            <p>QARS-CHOCO - bu sizning shirinlikka bo'lgan ishtiyoqingizni qondirish uchun yaratilgan mukammal joy. Bizning assortimentimizda turli xil shokoladlar, konfetlar va boshqa shirinliklar mavjud bo'lib, har bir kishi uchun biror narsa bor.</p>
+            <p>QARS-CHOCO - bu sizning shirinlikka bo'lgan ishtiyoqingizni qondirish uchun yaratilgan mukammal joy.</p>
         </section>
-        <footer>
-            &copy; 2026 QARS-CHOCO. Barcha huquqlar himoyalangan.
-            <footer>
-    <div class="social-links">
-        <p>Bizni kuzatib boring:</p>
-        <a href="https://t.me/Saidakbar_ChocoNuts" target="_blank" class="social-icon telegram">
-            Telegram
-        </a>
-        <a href="https://www.instagram.com/saidakbar_store" target="_blank" class="social-icon instagram">
-            Instagram
-        </a>
-    </div>
-    <p>&copy; 2026 QARS-CHOCO. Barcha huquqlar himoyalangan.</p>
-</footer>
-        </footer>
     </div>
 
-    <div id="mahsulotlar" class="products-section">
+    <div id="mahsulotlar" class="products-section" style="display:none;">
         <h2 class="section-title">Bizning Mahsulotlar</h2>
         <div class="product-grid">
             <div class="product-card">
-                <div class="badge">Aksiya</div>
-                <img src="Choconuts.jpg" alt="Choconuts Aksiya">
-                <h3>Premium Walnut Chocolate</h3>
-                <p class="old-price">50,000 UZS</p>
-                <p class="new-price">40,000 UZS</p>
-                <button class="add-to-cart">Savatga qo'shish</button>
-            </div>
-            <div class="product-card">
-                <img src="Dark_Choco_Walnut.jpg" alt="Dark Choconuts">
+                <img src="Dark_Choco_Walnut.jpg" alt="Dark Choco">
                 <h3>Dark Choco & Walnut</h3>
                 <p class="new-price">20,000 UZS</p>
                 <button class="add-to-cart">Savatga qo'shish</button>
             </div>
+            <div class="product-card">
+                <div class="badge" style="background: #A79277;">Yangi</div>
+                <img src="1000021898.jpg" alt="White Choco">
+                <h3>White & Walnut Premium</h3>
+                <p class="new-price">20,000 UZS</p>
+                <button class="add-to-cart">Savatga qo'shish</button>
+            </div>
+            <div class="product-card">
+                <div class="badge" style="background: #3D2B1F;">TOP-SET</div>
+                <img src="1000021914.png" alt="Mix Choco">
+                <h3>Mix Premium Walnut</h3>
+                <p class="new-price">35,000 UZS</p>
+                <button class="add-to-cart">Savatga qo'shish</button>
+            </div>
         </div>
     </div>
+
+    <div id="about-section" class="about-container" style="display:none;">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2>Nega QARS-CHOCO?</h2>
+                <p>Biz shunchaki shirinlik sotmaymiz, biz har bir qutiga mehr va sifatni joylaymiz.</p>
+                <div class="f-item">💎 <strong>Premium sifat:</strong> Faqat sara masalliqlar.</div>
+                <div class="f-item">🧤 <strong>Gigiyena:</strong> Toza va xavfsiz sharoitda tayyorlanadi.</div>
+            </div>
+            <div class="about-image">
+                <img src="1000021914.png" alt="Biz haqimizda" style="width:100%; border-radius:20px;">
+            </div>
+        </div>
+    </div>
+
     <div id="buyurtma-bolimi" class="order-section" style="display:none;">
-    <h2 class="section-title">Buyurtma rasmiylashtirish</h2>
-    <form id="order-form" class="order-form">
-        <input type="text" id="customer-name" placeholder="Ismingiz" required>
-        <input type="tel" id="customer-phone" placeholder="Telefon raqamingiz" required>
-        <textarea id="customer-address" placeholder="Yetkazib berish manzili" required></textarea>
-        
-        <select id="product-select">
-            <option value="Premium Walnut">Premium Walnut - 40,000 UZS</option>
-            <option value="Dark Choco">Dark Choco - 20,000 UZS</option>
-            <option value="Milk Choco">Milk Choco - 40,000 UZS</option>
-        </select>
-        
-        <input type="number" id="product-quantity" min="1" value="1" placeholder="Qancha (dona)" required>
-        
-        <button type="submit" class="submit-btn">Buyurtmani tasdiqlash</button>
-    </form>
-</div>
+        <h2 class="section-title">Buyurtma berish</h2>
+        <form id="order-form" class="order-form">
+            <input type="text" id="customer-name" placeholder="Ismingiz" required>
+            <input type="tel" id="customer-phone" placeholder="Telefoningiz" required>
+            <textarea id="customer-address" placeholder="Manzilingiz" required></textarea>
+            <select id="product-select">
+                <option value="Dark Choco">Dark Choco - 20,000 UZS</option>
+                <option value="White & Walnut">White & Walnut - 20,000 UZS</option>
+                <option value="Mix Premium">Mix Premium - 20,000 UZS</option>
+            </select>
+            <input type="number" id="product-quantity" min="1" value="1" required>
+            <button type="submit" class="submit-btn">Tasdiqlash</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <p>Bizni kuzatib boring:</p>
+            <a href="https://t.me/Saidakbar_ChocoNuts" target="_blank" class="social-icon telegram">Telegram</a>
+            <a href="https://www.instagram.com/saidakbar_store" target="_blank" class="social-icon instagram">Instagram</a>
+        </div>
+        <p>&copy; 2026 QARS-CHOCO. Barcha huquqlar himoyalangan.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
