@@ -316,4 +316,95 @@ header, nav {
         gap: 10px;
         align-items: center;
     }
+}.about-container {
+    padding: 60px 20px;
+    background-color: #FFF2E1;
+    min-height: 80vh;
+}
+
+.about-grid {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-text h3 {
+    color: #3D2B1F;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.about-list li {
+    margin-bottom: 10px;
+    color: #A79277;
+    font-weight: bold;
+}
+
+.about-list i {
+    margin-right: 10px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 0 #A79277;
+}
+
+/* Mobil uchun moslashuv */
+@media (max-width: 768px) {
+    .about-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.about-container {
+    padding: 50px 20px;
+    background-color: #fdf5e6;
+}
+.about-grid {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Mobil versiyada ustma-ust tushishi uchun */
+}
+.about-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+.about-features {
+    margin-top: 20px;
+}
+.f-item {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-left: 5px solid #A79277;
+    font-size: 0.9rem;
+}
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+.about-image img {
+    width: 100%;
 }
