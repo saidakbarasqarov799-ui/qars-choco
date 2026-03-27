@@ -398,6 +398,111 @@ header, nav {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
+}
+
+/* Umumiy tipografiya */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fff7ec;
+    color: #3d2b1f;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin: 0.6rem 0 1rem;
+    max-width: 780px;
+    color: #4f392b;
+}
+
+.cta-btn {
+    background: #3d2b1f;
+    color: #fff;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Mobil uchun qulaylik va katta shrift */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.05rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .about-text p,
+    .about-text .f-item,
+    .order-form input,
+    .order-form textarea,
+    .order-form select,
+    .product-card h3,
+    .new-price {
+        font-size: 1.1rem;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 0;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+        font-size: 1.1rem;
+    }
+
+    .slider-wrapper {
+        height: 280px;
+    }
+
+    .slider-images img {
+        height: 280px;
+    }
+
+    .order-form {
+        width: 100%;
+        padding: 0;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
     border-left: 5px solid #A79277;
     font-size: 0.9rem;
 }
@@ -407,4 +512,33 @@ header, nav {
 }
 .about-image img {
     width: 100%;
+}
+/* --- Aloqa bo'limi --- */
+.contact-section {
+    padding: 50px 20px;
+    background-color: #FFF2E1;
+    text-align: center;
+}
+.contact-section h2 {
+    color: #3D2B1F;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.contact-section p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+.contact-section ul {
+    list-style: none;
+    padding: 0;
+}
+.contact-section ul li {
+    color: #A79277;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+.contact-section ul li i {
+    margin-right: 10px;
+    color: #3D2B1F;
 }

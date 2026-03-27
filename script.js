@@ -99,3 +99,69 @@ orderForm.addEventListener('submit', function(e) {
             alert('Internet aloqasini tekshiring.');
         });
 });
+// 6. Boshlang'ich holat - faqat home bo'limi ko'rinadi
+showOnly(homeSection);
+// 7. Sahifa yuklanganda tepaga qaytarish
+window.scrollTo({ top: 0, behavior: 'smooth' });
+// 8. Qo'shimcha: Sahifa ichidagi barcha linklar uchun smooth scroll (agar kerak bo'lsa)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault(); 
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+// 9. Qo'shimcha: Sahifa yuklanganda barcha bo'limlar yashirin bo'lishi uchun
+homeSection.style.display = 'block';
+productsSection.style.display = 'none';
+aboutSection.style.display = 'none';
+orderSection.style.display = 'none';    
+// 10. Qo'shimcha: Formani yuborishdan keyin buyurtma bo'limini yashirish (ixtiyoriy)
+orderForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // ... (Telegramga yuborish kodi)
+    // Buyurtma yuborilgandan keyin buyurtma bo'limini yashirish
+    orderSection.style.display = 'none';
+    // ... (qolgan kod)
+});
+// 11. Qo'shimcha: "Savatga qo'shish" tugmasi bosilganda, agar buyurtma bo'limi allaqachon ko'rinayotgan bo'lsa, sahifani tepaga qaytarish
+addButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        if (orderSection.style.display === 'block') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
+});
+
+// 12. Qo'shimcha: Sahifa yuklanganda barcha bo'limlar yashirin bo'lishi uchun (takroriy, xavfsizlik uchun)
+homeSection.style.display = 'block';
+productsSection.style.display = 'none';
+aboutSection.style.display = 'none';
+orderSection.style.display = 'none';
+// 13. Qo'shimcha: Sahifa ichidagi barcha linklar uchun smooth scroll (takroriy, xavfsizlik uchun)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+// 14. Qo'shimcha: Sahifa yuklanganda barcha bo'limlar yashirin bo'lishi uchun (takroriy, xavfsizlik uchun)
+homeSection.style.display = 'block';
+productsSection.style.display = 'none';
+aboutSection.style.display = 'none';
+orderSection.style.display = 'none';
+// 15. Qo'shimcha: Formani yuborishdan keyin buyurtma bo'limini yashirish (takroriy, xavfsizlik uchun)
+orderForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // ... (Telegramga yuborish kodi)
+    // Buyurtma yuborilgandan keyin buyurtma bo'limini yashirish
+    orderSection.style.display = 'none';
+    // ... (qolgan kod)
+});
